@@ -1,0 +1,16 @@
+.section-webdev {
+  padding: 2rem 1rem 1.5rem 2rem;
+
+  .article-right {
+    .article-right__intro-content {
+      padding: 1rem 1rem;
+      padding-top: 0;
+    }
+
+    .article-right__main-content {
+      div {
+        margin: 1rem;
+      }
+    }
+  }
+}

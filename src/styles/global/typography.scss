@@ -1,0 +1,25 @@
+.header-main {
+  .logo {
+    font-size: 2rem;
+  }
+}
+
+.article-left__title,
+.article-right__title,
+.article-left__button,
+.article-right__button {
+  text-transform: uppercase;
+}
+
+nav {
+  ul {
+    li {
+      display: inline-block;
+
+      a {
+        padding: 0rem 1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

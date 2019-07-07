@@ -2,10 +2,20 @@ import React from "react";
 
 import "../../styles/elements/app.scss";
 
+import Header from "../header";
+import Footer from "../footer";
+import SectionWelcome from "../section_welcome/Section";
+import SectionWebDev from "../section_webdev/Section";
+import SectionContact from "../section_contact/Section";
+
 function App() {
   return (
-    <div className="container-app">
-      <h1>Hello there</h1>
+    <div className="app">
+      <Header />
+      <SectionWelcome />
+      <SectionWebDev />
+      <SectionContact />
+      <Footer />
     </div>
   );
 }
