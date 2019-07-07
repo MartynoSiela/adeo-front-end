@@ -6,7 +6,7 @@ import Button from "../global/ArticleButton";
 const ArticleLeft = () => {
   return (
     <article className="article-left">
-      <Title classname="article-left__title" text="welcome" />
+      <Title classname="article-left__title" text="welcome" textColor="white" />
       <p className="article-left__content">
         Voluptate quis voluptate est ad exercitation excepteur consequat officia
         consectetur mollit consequat proident nulla. Magna fugiat fugiat dolore

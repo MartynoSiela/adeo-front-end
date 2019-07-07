@@ -1,0 +1,77 @@
+.app {
+  .header-main {
+    background-color: $color-blue;
+    color: $color__text--light;
+
+    & * {
+      background-color: $color-blue;
+    }
+  }
+
+  .section-webdev {
+    background-color: $color-blue;
+
+    .article-left {
+      color: $color__text--light;
+      background-color: $color-blue;
+
+      & * {
+        background-color: $color-blue;
+      }
+    }
+
+    .article-right {
+      &__intro-content {
+        color: $color__text--light;
+        background-color: $color-blue;
+
+        & * {
+          background-color: $color-blue;
+        }
+      }
+
+      &__main-content {
+        color: $color__text--dark;
+      }
+    }
+  }
+
+  .section-welcome {
+    background-color: white;
+
+    .article-left {
+      background-color: $color-blue;
+      color: $color__text--light;
+
+      & * {
+        background-color: $color-blue;
+      }
+    }
+
+    .article-right {
+      &__content {
+        background-color: $color-gray;
+
+        & * {
+          background-color: $color-gray;
+        }
+      }
+    }
+  }
+
+  .section-contact {
+    .article-left {
+      background-color: $color__text--light;
+      color: $color__text--dark;
+    }
+  }
+
+  .footer-main {
+    background-color: $color__text--dark;
+    color: $color__text--light;
+
+    & * {
+      background-color: $color__text--dark;
+    }
+  }
+}
