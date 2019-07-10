@@ -1,3 +1,5 @@
+/* ----- Global layout settings ----- */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,101 @@ html {
   }
 }
 
+@mixin articles-in-row {
+  .article-left {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .article-right {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+@mixin articles-in-column {
+  .article-left {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .article-right {
+    grid-row: 2;
+    grid-column: 1;
+  }
+}
+
+/* ----- Define mixins for each breakpoint ----- */
+
+@mixin mobile {
+  @media (max-width: 300px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: 300px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin huge {
+  @media (min-width: 1500px) {
+    @content;
+  }
+}
+
+/* ----- Define font sizes for each breakpoint ----- */
+
+@include mobile {
+  html {
+    font-size: 2.5vw;
+  }
+  //   @include articles-in-column;
+}
+
+@include small {
+  html {
+    font-size: 3vw;
+  }
+  //   @include articles-in-column;
+}
+
+@include medium {
+  html {
+    font-size: 14px;
+  }
+  //   @include articles-in-column;
+}
+
+@include large {
+  html {
+    font-size: 16px;
+  }
+  //   @include articles-in-row;
+}
+
+@include huge {
+  html {
+    font-size: 18px;
+  }
+  //   @include articles-in-row;
+}
+
+/* ----- App-layout ----- */
+
 .app {
   margin: 0 auto;
   width: 80%;
@@ -20,6 +117,8 @@ html {
 .app {
   display: flex;
   flex-direction: column;
+
+  /* ----- Header layout ----- */
 
   .header-main {
     display: grid;
@@ -46,7 +145,26 @@ html {
     }
   }
 
+  /* ----- Section-welcome layout ----- */
+
   .section-welcome {
+    grid-row: 2;
+    display: grid;
+
+    @include medium {
+      grid-template-rows: 1fr auto;
+      grid-template-columns: 1fr;
+
+      @include articles-in-column;
+    }
+
+    @include large {
+      grid-template-rows: 1fr;
+      grid-template-columns: 2fr 3fr;
+
+      @include articles-in-row;
+    }
+
     .article-left {
       display: grid;
 
@@ -59,8 +177,61 @@ html {
     }
   }
 
+  /* ----- Section-webdev layout ----- */
+
   .section-webdev {
     grid-row: 3;
+    display: grid;
+
+    @include small {
+      .article-right {
+        &__main-content {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto 1fr;
+
+          &--left {
+            grid-row: 1;
+            grid-column: 1;
+          }
+
+          &--right {
+            grid-row: 2;
+            grid-column: 1;
+          }
+        }
+      }
+    }
+
+    @include medium {
+      grid-template-rows: 1fr auto;
+      grid-template-columns: 1fr;
+
+      .article-right {
+        &__main-content {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1;
+
+          &--left {
+            grid-row: 1;
+            grid-column: 1;
+          }
+
+          &--right {
+            grid-row: 1;
+            grid-column: 2;
+          }
+        }
+      }
+
+      @include articles-in-column;
+    }
+
+    @include large {
+      grid-template-rows: 1fr;
+      grid-template-columns: 2fr 3fr;
+
+      @include articles-in-row;
+    }
 
     .article-right {
       display: grid;
@@ -74,31 +245,15 @@ html {
       &__main-content {
         grid-row: 2;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1;
-
-        &--left {
-          grid-column: 1;
-        }
-
-        &--right {
-          grid-column: 2;
-        }
       }
     }
   }
 
-  .section-contact {
-    grid-row: 4;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
+  /* ----- Section-contact layout ----- */
 
-    &__title {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      grid-row: 1;
-    }
+  @mixin section-contact-row {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr;
 
     .article-left {
       grid-row: 2;
@@ -110,6 +265,47 @@ html {
       grid-column: 2;
     }
   }
+
+  @mixin section-contact-column {
+    grid-template-rows: 1fr auto auto;
+    grid-template-columns: 1fr;
+
+    .article-left {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    .article-right {
+      grid-row: 3;
+      grid-column: 1;
+    }
+  }
+  .section-contact {
+    grid-row: 4;
+    display: grid;
+
+    @include mobile {
+      @include section-contact-column;
+    }
+    @include small {
+      @include section-contact-column;
+    }
+    @include medium {
+      @include section-contact-column;
+    }
+
+    @include large {
+      @include section-contact-row;
+    }
+
+    &__title {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row: 1;
+    }
+  }
+
+  /* ----- Footer layout ----- */
 
   .footer-main {
     grid-row: 5;
@@ -124,30 +320,14 @@ html {
     }
     .nav-footer {
       grid-row: 1;
-      grid-column: 2;
+      grid-column: span 2;
       justify-self: end;
     }
 
     &__copyright {
       grid-row: 3;
-      grid-column: 2;
+      grid-column: span 2;
       justify-self: end;
-    }
-  }
-
-  .section-welcome,
-  .section-webdev,
-  .section-contact {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 2fr 3fr;
-
-    .article-left {
-      grid-column: 1;
-    }
-
-    .article-right {
-      grid-column: 2;
     }
   }
 }

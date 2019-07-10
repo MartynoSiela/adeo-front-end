@@ -27,7 +27,8 @@ class Button extends Component {
             color: this.props.colorText,
             textTransform: "uppercase",
             border: "2px solid " + this.props.colorText,
-            padding: "0.5rem"
+            padding: "0.5rem",
+            fontSize: "1rem"
           }}
         >
           {this.props.text}
