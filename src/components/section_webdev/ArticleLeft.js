@@ -1,6 +1,6 @@
 import React from "react";
 
-import Title from "../global/ArticleTitleH2";
+import Title from "../global/TitleH2";
 
 const ArticleLeft = () => {
   return (

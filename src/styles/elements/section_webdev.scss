@@ -1,15 +1,14 @@
 .section-webdev {
-  padding: 2rem 1rem 1.5rem 2rem;
-
   .article-right {
-    &__intro-content {
-      padding: 1rem 1rem;
-      padding-top: 0;
-    }
+    ul {
+      list-style: none;
+      li {
+        text-transform: capitalize;
+        font-style: italic;
+      }
 
-    &__main-content {
-      div {
-        margin: 1rem;
+      li:not(:last-child) {
+        border-bottom: 1px solid black;
       }
     }
   }

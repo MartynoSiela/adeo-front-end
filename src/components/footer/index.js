@@ -6,7 +6,7 @@ import NavPrimary from "./NavPrimary";
 
 const index = () => {
   return (
-    <header className="footer-main">
+    <footer className="footer-main">
       <div className="footer-main__content">
         <p>
           Ad in cillum nisi ex amet sint ex nulla. Adipisicing nisi consequat
@@ -20,7 +20,7 @@ const index = () => {
         <span> LOGO </span>
         <span>All rights reserved</span>
       </div>
-    </header>
+    </footer>
   );
 };
 

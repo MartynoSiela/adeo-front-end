@@ -1,25 +1,5 @@
 .section-welcome {
-  padding: 1rem;
-
-  .article-left {
-    margin: 1rem;
-    padding: 2rem;
-    display: grid;
-
-    .article__button {
-      justify-self: end;
-      align-self: end;
-    }
-  }
-
   .article-right {
-    margin: 1rem;
-    margin-right: 4rem;
-
-    &__content {
-      padding: 1rem 2rem;
-    }
-
     img {
       object-fit: cover;
       min-width: 100%;

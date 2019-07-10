@@ -5,19 +5,26 @@ const NavPrimary = () => {
     <nav aria-labelledby="primary-navigation" className="nav-primary">
       <ul>
         <li>
-          <a>home</a>
+          <a href="#home">home</a>
         </li>
         <li>
-          <a>service</a>
+          <a href="#service">service</a>
+        </li>
+        <li className="dropdown">
+          <a className="dropbtn">works</a>
+          <div className="dropdown-content">
+            <a href="#">all</a>
+            <a href="#">graphic</a>
+            <a href="#">design</a>
+            <a href="#">logo</a>
+            <a href="#">website</a>
+          </div>
         </li>
         <li>
-          <a>works</a>
+          <a href="#about">about me</a>
         </li>
         <li>
-          <a>about me</a>
-        </li>
-        <li>
-          <a>contact</a>
+          <a href="#contact">contact</a>
         </li>
       </ul>
     </nav>

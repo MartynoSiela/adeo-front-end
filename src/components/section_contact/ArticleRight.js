@@ -1,15 +1,17 @@
 import React from "react";
 
+import Button from "../global/Button";
+
 const ArticleRight = () => {
   return (
     <article className="article-right">
       <form className="article-right__form">
         <div>
-          <label for="name">Name:</label>
+          <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="user_name" />
         </div>
         <div>
-          <label for="mail">E-mail:</label>
+          <label htmlFor="mail">E-mail:</label>
           <input
             type="email"
             id="mail"
@@ -18,12 +20,15 @@ const ArticleRight = () => {
           />
         </div>
         <div>
-          <label for="msg">Message:</label>
+          <label htmlFor="msg">Message:</label>
           <textarea id="msg" name="user_message" />
         </div>
-        <div class="button">
-          <button type="button">Send your message</button>
-        </div>
+        <Button
+          colorDefault="white"
+          colorClicked="lightgrey"
+          colorText="var(--colorBlue)"
+          text="send"
+        />
       </form>
     </article>
   );

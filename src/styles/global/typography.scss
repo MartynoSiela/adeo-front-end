@@ -1,25 +1,37 @@
+html {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
 .header-main {
   .logo {
     font-size: 2rem;
   }
 }
 
-.article-left__title,
-.article-right__title,
-.article-left__button,
-.article-right__button {
-  text-transform: uppercase;
-}
-
 nav {
   ul {
     li {
+      padding: 0rem 0.5rem;
       display: inline-block;
+      text-transform: uppercase;
+    }
 
-      a {
-        padding: 0rem 1rem;
-        text-transform: uppercase;
-      }
+    li:first-child {
+      padding-left: 0;
+    }
+    li:last-child {
+      padding-right: 0;
     }
   }
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 1.2rem;
 }

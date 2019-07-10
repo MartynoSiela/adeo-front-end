@@ -5,19 +5,19 @@ const NavMenu = () => {
     <nav aria-labelledby="menu-navigation" className="nav-menu">
       <ul>
         <li>
-          <a>menu</a>
+          <a href="#">menu</a>
         </li>
         <li>
-          <a>some text</a>
+          <a href="#">some text</a>
         </li>
         <li>
-          <a>another item</a>
+          <a href="#">another item</a>
         </li>
         <li>
-          <a>one more</a>
+          <a href="#">one more</a>
         </li>
         <li>
-          <a>and last one</a>
+          <a href="#">and last one</a>
         </li>
       </ul>
     </nav>

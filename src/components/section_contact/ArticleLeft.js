@@ -1,12 +1,8 @@
 import React from "react";
 
-import Title from "../global/ArticleTitleH1";
-import Button from "../global/ArticleButton";
-
 const ArticleLeft = () => {
   return (
     <article className="article-left">
-      <Title classname="article-left__title" text="contact" textColor="black" />
       <div className="article-left__main-content">
         <p>
           Voluptate quis voluptate est ad exercitation excepteur consequat
