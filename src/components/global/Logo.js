@@ -5,10 +5,12 @@ const Logo = () => {
   const styleSlim = { fontWeight: "lighter" };
   const style = {
     textTransform: "uppercase",
-    padding: "0.5rem 0rem"
+    padding: "0.5rem 0rem",
+    textDecoration: "none",
+    color: "white"
   };
   return (
-    <a className="logo" style={style}>
+    <a href="#home" className="logo" style={style}>
       <span className="logo__text--bold" style={styleBold}>
         demo
       </span>
