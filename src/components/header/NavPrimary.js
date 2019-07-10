@@ -11,7 +11,9 @@ const NavPrimary = () => {
           <a href="#service">service</a>
         </li>
         <li className="dropdown">
-          <a className="dropbtn">works</a>
+          <a href="#works" className="dropbtn">
+            works
+          </a>
           <div className="dropdown-content">
             <a href="#">all</a>
             <a href="#">graphic</a>

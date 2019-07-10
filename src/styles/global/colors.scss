@@ -8,6 +8,33 @@
     }
   }
 
+  .section-welcome {
+    background-color: white;
+
+    .article-left {
+      background-color: $color-blue;
+      color: $color__text--light;
+
+      & * {
+        background-color: $color-blue;
+      }
+    }
+
+    .article-right {
+      &__content {
+        background-color: $color-gray;
+
+        p {
+          color: $color-dark-gray;
+        }
+
+        & * {
+          background-color: $color-gray;
+        }
+      }
+    }
+  }
+
   .section-webdev {
     background-color: $color-blue;
 
@@ -32,28 +59,10 @@
 
       &__main-content {
         color: $color__text--dark;
-      }
-    }
-  }
 
-  .section-welcome {
-    background-color: white;
-
-    .article-left {
-      background-color: $color-blue;
-      color: $color__text--light;
-
-      & * {
-        background-color: $color-blue;
-      }
-    }
-
-    .article-right {
-      &__content {
-        background-color: $color-gray;
-
-        & * {
-          background-color: $color-gray;
+        p,
+        h4 {
+          color: $color-dark-gray;
         }
       }
     }
@@ -63,12 +72,20 @@
     .article-left {
       background-color: $color__text--light;
       color: $color__text--dark;
+
+      p {
+        color: $color-dark-gray;
+      }
     }
   }
 
   .footer-main {
     background-color: $color__text--dark;
     color: $color__text--light;
+
+    p {
+      color: $color-dark-gray;
+    }
 
     & * {
       background-color: $color__text--dark;

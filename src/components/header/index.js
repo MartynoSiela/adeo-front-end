@@ -4,7 +4,7 @@ import "../../styles/elements/header.scss";
 
 import NavPrimary from "./NavPrimary";
 import NavMenu from "./NavMenu";
-import Logo from "./Logo";
+import Logo from "../global/Logo";
 
 const index = () => {
   return (

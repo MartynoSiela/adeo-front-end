@@ -2,7 +2,8 @@ import React from "react";
 
 import "../../styles/elements/footer.scss";
 
-import NavPrimary from "./NavPrimary";
+import Logo from "../global/Logo";
+import Nav from "./Nav";
 
 const index = () => {
   return (
@@ -14,11 +15,11 @@ const index = () => {
           qui labore et mollit do pariatur labore pariatur consequat eiusmod.
         </p>
       </div>
-      <NavPrimary />
+      <Nav />
       <div className="footer-main__copyright">
-        <span>©</span>
-        <span> LOGO </span>
-        <span>All rights reserved</span>
+        <span>© </span>
+        <Logo />
+        <span> All rights reserved</span>
       </div>
     </footer>
   );
