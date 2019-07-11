@@ -1,11 +1,12 @@
 {
   "name": "adeo-front-end",
   "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "Adeo web fron-end task repository",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode=development --open --hot",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --open --hot --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,12 @@
   "bugs": {
     "url": "https://github.com/Chateux1/adeo-front-end/issues"
   },
-  "homepage": "https://github.com/Chateux1/adeo-front-end#readme",
+  "homepage": "https://chateux1.github.io/adeo-front-end/",
   "dependencies": {
     "axios": "^0.19.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
+    "react-app-polyfill": "^1.0.1",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
@@ -40,6 +43,7 @@
     "url-loader": "^2.0.1",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
   }
 }
