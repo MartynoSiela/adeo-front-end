@@ -1,16 +1,12 @@
 import React from "react";
 
+import Image from "./Image";
 import Title from "../global/TitleH2";
-import Image from "../../assets/bender_original.jpg";
 
 const ArticleRight = () => {
   return (
     <article className="article-right">
-      <img
-        className="article-right__background-image"
-        src={Image}
-        alt="Background Image"
-      />
+      <Image />
       <div className="article-right__content">
         <Title classname="article-right__title" text="ui/ux design" />
         <p>
