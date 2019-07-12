@@ -1,7 +1,5 @@
 import React from "react";
 
-import "../../styles/elements/app.scss";
-
 import Header from "../header";
 import Footer from "../footer";
 import SectionWelcome from "../section_welcome/Section";
